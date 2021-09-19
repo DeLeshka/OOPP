@@ -35,7 +35,7 @@ int getAnswer()
 
 inline std::string getString(std::string message)
 {
-    cout << "Please, enter " << message << ": ";
+    cout << "\nPlease, enter " << message << ": ";
     string key;
     cin.clear();
     cin.ignore(32767, '\n');
@@ -67,7 +67,7 @@ int main()
 
         case 3:
         {
-            std::string fileName{ getString("an intput file name (without \".txt\")") + ".txt" };
+            std::string fileName{ getString("an input file name (without \".txt\")") + ".txt" };
             std::ifstream inFile(fileName);
             assert(inFile && "Output file couldn't be opened");
             staff.readFromFile(inFile);

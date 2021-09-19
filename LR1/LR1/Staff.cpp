@@ -7,7 +7,7 @@ using namespace std;
 
 Staff::Staff()
 {
-	cout << "Staff()\n";
+	//cout << "Staff()\n";
 }
 
 Staff::~Staff()
@@ -16,12 +16,12 @@ Staff::~Staff()
 	{
 		delete employeePtr;
 	}
-	cout << "~Staff()\n";
+	//cout << "~Staff()\n";
 }
 
 void Staff::addEmployee()
 {
-	Employee* employeePtr = new Employee;
+	Employee* employeePtr = new Employee();
 	employeePtr->setEmployeeInfo();
 	staff.push_back(employeePtr);
 }
@@ -52,19 +52,24 @@ void Staff::writeToFile(ofstream& outFile)
 
 void Staff::readFromFile(ifstream& inFile)
 {
-	for (int i = 0; i < 3; ++i)
+	int lenFile;
+	inFile >> lenFile;
+	for (int i = 0; i < lenFile; ++i)
 	{
 		Employee* employeePtr = new Employee;
 		employeePtr->addFromFile(inFile);
 		staff.push_back(employeePtr);
 	}
+	cout << "\nReading was successfull." << endl << endl;
 }
 
 void Staff::clear()
 {
-	for (int i = 0; i < staff.size(); ++i)
+	int length = staff.size();
+	for (int i = 0; i < length; ++i)
 	{
 		delete staff[i];
 	}
 	staff.clear();
+	cout << "Container cleansed. " << length << " objects have been deleted from dynamic memory.\n\n";
 }

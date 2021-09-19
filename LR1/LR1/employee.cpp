@@ -4,23 +4,24 @@
 
 using namespace std;
 
+//static int for unique id generation
 int Employee::idGenerator = 1;
 
 Employee::Employee(string name, string surname, short age, double salary)
 	: m_name(name), m_surname(surname), m_age(age), m_salary(salary) 
 {
 	m_id = idGenerator++;
-	cout << "\nEmployee()\n" << endl;
+	//cout << "\nEmployee()\n" << endl;
 }
 
 Employee::~Employee() 
 {
-	cout << "\n~Employee()\n" << endl;
+	//cout << "\n~Employee()\n" << endl;
 }
 
 void Employee::getEmployeeInfoInConsole()
 {
-	cout << "Employee ID: " << m_id << endl <<
+	cout << "\nEmployee ID: " << m_id << endl <<
 				 "Name: " << m_name << endl <<
 				 "Surname: " << m_surname << endl <<
 				 "Age: " << m_age << endl <<
@@ -29,7 +30,7 @@ void Employee::getEmployeeInfoInConsole()
 
 void Employee::setEmployeeInfo()
 {
-	cout << "Name: ";
+	cout << "\nName: ";
 	cin >> m_name;
 	cout << "Surname: ";
 	cin >> m_surname;
@@ -37,7 +38,7 @@ void Employee::setEmployeeInfo()
 	cin >> m_age;
 	cout << "Salary: ";
 	cin >> m_salary;
-	cout << endl;
+	cout << "\nEmployee added.\n" << endl;
 }
 
 void Employee::writeInFile(ofstream& outFile)
