@@ -16,7 +16,7 @@ Employee::Employee(string name, string surname, short age, double salary)
 
 Employee::~Employee() 
 {
-	//cout << "\n~Employee()\n" << endl;
+	cout << "\n~Employee()\n" << endl;
 }
 
 void Employee::getEmployeeInfoInConsole()

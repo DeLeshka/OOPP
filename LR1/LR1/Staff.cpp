@@ -71,5 +71,5 @@ void Staff::clear()
 		delete staff[i];
 	}
 	staff.clear();
-	cout << "Container cleansed. " << length << " objects have been deleted from dynamic memory.\n\n";
+	cout << "\nContainer cleansed. " << length << " objects have been deleted from dynamic memory.\n\n";
 }

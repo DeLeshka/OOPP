@@ -1,4 +1,4 @@
-﻿#include "employee.h"
+﻿#include "employee_Kondrikov.h"
 #include "Staff.h"
 #include <iostream>
 #include <fstream>
@@ -19,7 +19,6 @@ void showMenu()
 int getAnswer()
 {
     int answer;
-
     cout << "Select an operation: ";
     while ((cin >> answer).fail() || !(answer > 0 && answer < 6 || answer == 0))
     {
@@ -27,11 +26,8 @@ int getAnswer()
         cin.ignore(32767, '\n');
         cout << "Please, input a valid answer: ";
     }
-
     return answer;
-
 }
-
 
 inline std::string getString(std::string message)
 {
