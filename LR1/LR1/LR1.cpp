@@ -48,7 +48,7 @@ inline std::string getString(std::string message)
 int main()
 {
     setlocale(LC_ALL, "Russian");
-    Staff st;
+    Staff staff;
     while (true)
     {
         showMenu();
@@ -56,31 +56,43 @@ int main()
         {
         case 1:
         {
-            st.addEmployee();
+            staff.addEmployee();
             break;
         }
+
         case 2:
         {
-            st.printStaff();
+            staff.printStaff();
             break;
+
         case 3:
+        {
+            std::string fileName{ getString("an intput file name (without \".txt\")") + ".txt" };
+            std::ifstream inFile(fileName);
+            assert(inFile && "Output file couldn't be opened");
+            staff.readFromFile(inFile);
+            inFile.close();
             break;
+        }
+
         case 4:
         {
-            std::string fileName{ getString("an input file name (without \".txt\")") + ".txt" };
+            std::string fileName{ getString("an output file name (without \".txt\")") + ".txt" };
             std::ofstream outFile(fileName);
             assert(outFile && "Output file couldn't be opened");
-            st.writeToFile(outFile);
+            staff.writeToFile(outFile);
             outFile.close();
-        }
             break;
+        }
+            
         case 5:
+            staff.clear();
             break;
         }
+
         case 0:
             return 0;
-        default:
-            break;
+
         }
     }
 

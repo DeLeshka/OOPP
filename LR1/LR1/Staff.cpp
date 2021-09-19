@@ -29,8 +29,13 @@ void Staff::addEmployee()
 
 void Staff::printStaff()
 {
-
-	for (int i = 0; i < staff.size(); ++i)
+	int length = staff.size();
+	if (length == 0)
+	{
+		cout << "\nEmpty set.\n\n";
+		return;
+	}
+	for (int i = 0; i < length; ++i)
 	{
 		staff[i]->getEmployeeInfoInConsole();
 	}
@@ -43,4 +48,23 @@ void Staff::writeToFile(ofstream& outFile)
 	{
 		staff[i]->writeInFile(outFile);
 	}
+}
+
+void Staff::readFromFile(ifstream& inFile)
+{
+	for (int i = 0; i < 3; ++i)
+	{
+		Employee* employeePtr = new Employee;
+		employeePtr->addFromFile(inFile);
+		staff.push_back(employeePtr);
+	}
+}
+
+void Staff::clear()
+{
+	for (int i = 0; i < staff.size(); ++i)
+	{
+		delete staff[i];
+	}
+	staff.clear();
 }

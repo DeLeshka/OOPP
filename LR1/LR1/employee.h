@@ -24,6 +24,7 @@ public:
 	void getEmployeeInfoInConsole();
 	void setEmployeeInfo();
 	void writeInFile(ofstream& outFile);
+	void addFromFile(ifstream& inFile);
 
 };
 

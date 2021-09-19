@@ -20,6 +20,7 @@ public:
 	void printStaff();
 	void writeToFile(ofstream& outFile);
 	void readFromFile(ifstream& inFile);
+	void clear();
 };
 
 #endif

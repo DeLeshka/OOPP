@@ -1,0 +1,24 @@
+Employee ID: 1
+Name: al
+Surname: asd
+Age: 20
+Salary: 1200
+
+Employee ID: 2
+Name: sdfkhjb
+Surname: dfkub
+Age: 45
+Salary: 123
+
+Employee ID: 3
+Name: 465
+Surname: 4563
+Age: 12
+Salary: 84
+
+Employee ID: 4
+Name: asdfkbk
+Surname: sdfjkbk
+Age: 85
+Salary: 45
+

@@ -1,18 +1,12 @@
-Employee ID: 1
-Name: sdfkhjb
-Surname: sdfkub
-Age: 45
-Salary: 123
-
-Employee ID: 2
-Name: 465
-Surname: 4563
-Age: 12
-Salary: 84
-
-Employee ID: 3
-Name: asdfkbk
-Surname: sdfjkbk
-Age: 7
-Salary: 85
-
+sdfkhjb
+dfkub
+45
+123
+465
+4563
+12
+84
+asdfkbk
+sdfjkbk
+85
+45

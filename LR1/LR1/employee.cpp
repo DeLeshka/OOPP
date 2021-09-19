@@ -48,3 +48,8 @@ void Employee::writeInFile(ofstream& outFile)
 			   "Age: " << m_age << endl <<
 			   "Salary: " << m_salary << endl << endl;
 }
+
+void Employee::addFromFile(ifstream& inFile)
+{
+	inFile >> m_name >> m_surname >> m_age >> m_salary;
+}
