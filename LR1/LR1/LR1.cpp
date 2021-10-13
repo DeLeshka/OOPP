@@ -1,4 +1,4 @@
-﻿#include "employee_Kondrikov.h"
+﻿#include "employee.h"
 #include "Staff.h"
 #include <iostream>
 #include <fstream>

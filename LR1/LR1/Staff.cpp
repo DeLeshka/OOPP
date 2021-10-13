@@ -7,7 +7,7 @@ using namespace std;
 
 Staff::Staff()
 {
-	//cout << "Staff()\n";
+	cout << "Staff()\n";
 }
 
 Staff::~Staff()
@@ -16,7 +16,7 @@ Staff::~Staff()
 	{
 		delete employeePtr;
 	}
-	//cout << "~Staff()\n";
+	cout << "~Staff()\n";
 }
 
 void Staff::addEmployee()

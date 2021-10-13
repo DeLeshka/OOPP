@@ -4,22 +4,22 @@
 
 using namespace std;
 
-//static int for unique id generation
-int Employee::idGenerator = 1;
 
-Employee::Employee(string name, string surname, short age, double salary)
+int EmployeeKondrikov::idGenerator = 1;
+
+EmployeeKondrikov::EmployeeKondrikov(string name, string surname, short age, double salary)
 	: m_name(name), m_surname(surname), m_age(age), m_salary(salary) 
 {
 	m_id = idGenerator++;
-	//cout << "\nEmployee()\n" << endl;
+	cout << "\nEmployee()\n" << endl;
 }
 
-Employee::~Employee() 
+EmployeeKondrikov::~EmployeeKondrikov()
 {
 	cout << "\n~Employee()\n" << endl;
 }
 
-void Employee::getEmployeeInfoInConsole()
+void EmployeeKondrikov::getEmployeeInfoInConsole()
 {
 	cout << "\nEmployee ID: " << m_id << endl <<
 				 "Name: " << m_name << endl <<
@@ -28,7 +28,7 @@ void Employee::getEmployeeInfoInConsole()
 				 "Salary: " << m_salary << endl << endl;
 }
 
-void Employee::setEmployeeInfo()
+void EmployeeKondrikov::setEmployeeInfo()
 {
 	cout << "\nName: ";
 	cin >> m_name;
@@ -41,7 +41,7 @@ void Employee::setEmployeeInfo()
 	cout << "\nEmployee added.\n" << endl;
 }
 
-void Employee::writeInFile(ofstream& outFile)
+void EmployeeKondrikov::writeInFile(ofstream& outFile)
 {
 	outFile << "Employee ID: " << m_id << endl <<
 			   "Name: " << m_name << endl <<
@@ -50,7 +50,7 @@ void Employee::writeInFile(ofstream& outFile)
 			   "Salary: " << m_salary << endl << endl;
 }
 
-void Employee::addFromFile(ifstream& inFile)
+void EmployeeKondrikov::addFromFile(ifstream& inFile)
 {
 	inFile >> m_name >> m_surname >> m_age >> m_salary;
 }
