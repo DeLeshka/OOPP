@@ -3,11 +3,13 @@
 #include "EmployeeKondrikov.h"
 #include <iostream>
 
+IMPLEMENT_SERIAL(ProgrammerKondrikov, EmployeeKondrikov, 0)
+
 void ProgrammerKondrikov::printInfo()
 {
 	this->EmployeeKondrikov::printInfo();
 	std::cout << "Work experience: " << m_workExperience << std::endl <<
-		"Language: " << m_language << std::endl;
+		"Language: " << m_language << std::endl <<std::endl;
 }
 
 void ProgrammerKondrikov::setEmployeeInfo()

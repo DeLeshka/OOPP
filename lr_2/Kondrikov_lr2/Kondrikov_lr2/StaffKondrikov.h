@@ -3,8 +3,6 @@
 
 #include <vector>
 #include "EmployeeKondrikov.h"
-#include "ProgrammerKondrikov.h"
-#include <fstream>
 
 
 class StaffKondrikov
@@ -17,8 +15,8 @@ public:
 	StaffKondrikov();
 	~StaffKondrikov();
 	void addEmployee();
-	void printStaff();
 	void addProgrammer();
+	void printStaff();
 	void writeToFile();
 	void readFromFile();
 	void clear();

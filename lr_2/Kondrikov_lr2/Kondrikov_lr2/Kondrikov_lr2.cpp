@@ -4,6 +4,8 @@
 #include "pch.h"
 #include "framework.h"
 #include "Kondrikov_lr2.h"
+#include "EmployeeKondrikov.h"
+#include "ProgrammerKondrikov.h"
 #include "StaffKondrikov.h"
 #include <cassert>
 
@@ -21,6 +23,7 @@ void showMenu()
         "3. Read list of employees from file.\n" <<
         "4. Write list of employees in file.\n" <<
         "5. Clear list of employees.\n" <<
+        "6. Add a programmer\n" <<
         "0. Exit.\n\n" << endl;
 }
 
@@ -28,7 +31,7 @@ int getAnswer()
 {
     int answer;
     cout << "Select an operation: ";
-    while ((cin >> answer).fail() || !(answer > 0 && answer < 6 || answer == 0))
+    while ((cin >> answer).fail() || !(answer > 0 && answer < 7 || answer == 0))
     {
         cin.clear();
         cin.ignore(32767, '\n');
@@ -43,7 +46,7 @@ int getAnswer()
 
 CWinApp theApp;
 
-using namespace std;
+
 
 int main()
 {

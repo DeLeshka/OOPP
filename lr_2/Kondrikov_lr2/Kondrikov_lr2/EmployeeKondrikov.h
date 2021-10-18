@@ -1,11 +1,10 @@
 #ifndef EMPLOYEE_H
 #define EMPLOYEE_H
-
 #pragma region MFC Serialization
-#include <string>
-#include <fstream>
 #include "pch.h"
 #include "framework.h"
+#include <string> 
+
 
 using namespace std;
 
@@ -24,7 +23,7 @@ public:
 	DECLARE_SERIAL(EmployeeKondrikov);
 
 	EmployeeKondrikov(string name = "unknown", string surname = "unknown", short age = 0, double salary = 0.0);
-	~EmployeeKondrikov();
+	/*~EmployeeKondrikov() { cout << "\n~Employee()\n" << endl; }*/
 
 	//виртуализируем консольный ввод/вывод, чтобы потомки по указателю на родительский класс печатали свою версию 
 	virtual void printInfo();

@@ -3,7 +3,6 @@
 #include "framework.h"
 
 #include "EmployeeKondrikov.h"
-#include <iostream>
 
 using namespace std;
 
@@ -18,10 +17,6 @@ EmployeeKondrikov::EmployeeKondrikov(string name, string surname, short age, dou
 	cout << "\nEmployee()\n" << endl;
 }
 
-EmployeeKondrikov::~EmployeeKondrikov()
-{
-	cout << "\n~Employee()\n" << endl;
-}
 
 void EmployeeKondrikov::printInfo()
 {

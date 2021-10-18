@@ -1,10 +1,8 @@
 #include "pch.h"
-#include "framework.h"
-#include "EmployeeKondrikov.h"
 #include "StaffKondrikov.h"
+#include "EmployeeKondrikov.h"
 #include "ProgrammerKondrikov.h"
 #include <iostream>
-#include <fstream>
 
 using namespace std;
 
