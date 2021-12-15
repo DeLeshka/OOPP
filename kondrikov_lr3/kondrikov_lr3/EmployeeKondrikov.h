@@ -5,6 +5,7 @@
 #include "framework.h"
 #include <string> 
 #include <atlstr.h>
+#include <sstream>
 
 using namespace std;
 
@@ -26,7 +27,7 @@ public:
 	EmployeeKondrikov(CString name = "unknown", CString surname = "unknown", short age = 0, double salary = 0.0);
 
 	//виртуализируем консольный ввод/вывод, чтобы потомки по указателю на родительский класс печатали свою версию 
-	virtual void printInfo();
+	virtual void printInfo(ostream& out);
 	virtual void setEmployeeInfo();
 	virtual void Serialize(CArchive& ar);
 };

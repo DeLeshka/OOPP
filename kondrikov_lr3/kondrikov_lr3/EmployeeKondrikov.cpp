@@ -1,7 +1,7 @@
 //об€зательно первыми include'ами, все до них игнорируетс€, выдава€ ошибку компил€ции
 #include "pch.h"
 #include "framework.h"
-
+#include <iostream>
 #include "EmployeeKondrikov.h"
 
 using namespace std;
@@ -17,9 +17,9 @@ EmployeeKondrikov::EmployeeKondrikov(CString name, CString surname, short age, d
 }
 
 
-void EmployeeKondrikov::printInfo()
+void EmployeeKondrikov::printInfo(ostream& out)
 {
-	cout << "\nEmployee ID: " << m_id << endl <<
+	out << "\nEmployee ID: " << m_id << endl <<
 		"Name: " << m_name << endl <<
 		"Surname: " << m_surname << endl <<
 		"Age: " << m_age << endl <<

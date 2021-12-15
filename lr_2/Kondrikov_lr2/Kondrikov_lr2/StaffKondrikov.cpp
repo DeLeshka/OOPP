@@ -6,10 +6,6 @@
 
 using namespace std;
 
-StaffKondrikov::StaffKondrikov()
-{
-	cout << "Staff()\n";
-}
 
 StaffKondrikov::~StaffKondrikov()
 {
@@ -24,7 +20,7 @@ StaffKondrikov::~StaffKondrikov()
 
 void StaffKondrikov::addEmployee()
 {
-	auto employeePtr = make_shared<EmployeeKondrikov>();
+	shared_ptr<EmployeeKondrikov> employeePtr = make_shared<EmployeeKondrikov>();
 	employeePtr->setEmployeeInfo();
 	staff.push_back(employeePtr);
 }
@@ -32,8 +28,7 @@ void StaffKondrikov::addEmployee()
 
 void StaffKondrikov::addProgrammer()
 {
-	ProgrammerKondrikov* newProgrammer = new ProgrammerKondrikov;
-	shared_ptr<EmployeeKondrikov> employeePtr(newProgrammer);
+	shared_ptr<EmployeeKondrikov> employeePtr = make_shared<ProgrammerKondrikov>();;
 	employeePtr->setEmployeeInfo();
 	staff.push_back(employeePtr);
 }
@@ -68,6 +63,7 @@ void StaffKondrikov::writeToFile()
 		ar << tmpPtr;
 	}
 	staff.clear();
+	cout << "\nSuccessfull writing\n\n";
 }
 
 void StaffKondrikov::readFromFile()
@@ -87,6 +83,7 @@ void StaffKondrikov::readFromFile()
 		shared_ptr<EmployeeKondrikov> tmpShared(tmpPtr);
 		staff.push_back(tmpShared);
 	}
+	cout << "\nSuccessfull reading\n\n";
 }
 
 void StaffKondrikov::clear()
