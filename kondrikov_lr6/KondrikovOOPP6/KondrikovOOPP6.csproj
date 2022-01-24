@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{70248E91-860C-4D22-9ED1-270C97D10DB6}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>SimonovOOPP6</RootNamespace>
-    <AssemblyName>SimonovOOPP6</AssemblyName>
+    <RootNamespace>KondrikovOOPP6</RootNamespace>
+    <AssemblyName>KondrikovOOPP6</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -74,6 +74,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
